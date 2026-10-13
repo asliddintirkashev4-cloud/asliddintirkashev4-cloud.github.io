@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard — Asliddin Tirkashev</title>
+  <meta name="description" content="Course project: an admin dashboard built with CSS Grid for the frame and Flexbox inside the blocks. Sample data.">
+  <meta name="theme-color" content="#0b2130">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b2130'/%3E%3Ctext x='32' y='42' font-family='Verdana,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%23f3e6cb'%3EAT%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="side">
+      <p class="brand">Rīga Roast</p>
+      <nav class="menu" aria-label="Dashboard">
+        <a href="#overview" aria-current="page">Overview</a>
+        <a href="#orders">Orders</a>
+        <a href="#items">Menu items</a>
+        <a href="#overview">Customers</a>
+        <a href="#overview">Settings</a>
+      </nav>
+      <p class="side__note">Sample data for a small café. Nothing here is real.</p>
+    </aside>
+
+    <header class="bar">
+      <div>
+        <p class="kicker">Course project &middot; Grid and Flexbox</p>
+        <h1 id="overview">Overview</h1>
+      </div>
+      <a class="back" href="../../#projects">Back to profile</a>
+    </header>
+
+    <main class="main">
+
+      <section class="stats" aria-label="Today in numbers">
+        <article class="stat">
+          <p class="stat__label">Orders today</p>
+          <p class="stat__value">148</p>
+          <p class="stat__delta up">+12 vs. yesterday</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Revenue</p>
+          <p class="stat__value">€1,284.50</p>
+          <p class="stat__delta up">+€96.20 vs. yesterday</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Average order</p>
+          <p class="stat__value">€8.68</p>
+          <p class="stat__delta down">−€0.14 vs. yesterday</p>
+        </article>
+        <article class="stat">
+          <p class="stat__label">Open orders</p>
+          <p class="stat__value">5</p>
+          <p class="stat__delta">2 preparing, 3 ready</p>
+        </article>
+      </section>
+
+      <section class="panel chart" aria-labelledby="chart-title">
+        <div class="panel__head">
+          <h2 id="chart-title">Orders this week</h2>
+          <p class="panel__meta">Mon to Sun</p>
+        </div>
+        <ul class="bars" id="bars">
+          <li style="--v:112"><span class="bars__value">112</span><span class="bars__bar" tabindex="0" aria-label="Monday, 112 orders"></span><span class="bars__day">Mon</span></li>
+          <li style="--v:126"><span class="bars__value">126</span><span class="bars__bar" tabindex="0" aria-label="Tuesday, 126 orders"></span><span class="bars__day">Tue</span></li>
+          <li style="--v:98"><span class="bars__value">98</span><span class="bars__bar" tabindex="0" aria-label="Wednesday, 98 orders"></span><span class="bars__day">Wed</span></li>
+          <li style="--v:141"><span class="bars__value">141</span><span class="bars__bar" tabindex="0" aria-label="Thursday, 141 orders"></span><span class="bars__day">Thu</span></li>
+          <li style="--v:163"><span class="bars__value">163</span><span class="bars__bar" tabindex="0" aria-label="Friday, 163 orders"></span><span class="bars__day">Fri</span></li>
+          <li style="--v:187"><span class="bars__value">187</span><span class="bars__bar" tabindex="0" aria-label="Saturday, 187 orders"></span><span class="bars__day">Sat</span></li>
+          <li style="--v:148" class="is-today"><span class="bars__value">148</span><span class="bars__bar" tabindex="0" aria-label="Sunday, 148 orders, today"></span><span class="bars__day">Sun</span></li>
+        </ul>
+      </section>
+
+      <section class="panel items" id="items" aria-labelledby="items-title">
+        <div class="panel__head">
+          <h2 id="items-title">Top items today</h2>
+        </div>
+        <ul class="top">
+          <li><span class="top__name">Flat white</span><span class="top__count">46</span><span class="top__bar" style="--w:100%"></span></li>
+          <li><span class="top__name">Cappuccino</span><span class="top__count">39</span><span class="top__bar" style="--w:85%"></span></li>
+          <li><span class="top__name">Cardamom bun</span><span class="top__count">31</span><span class="top__bar" style="--w:67%"></span></li>
+          <li><span class="top__name">Filter coffee</span><span class="top__count">22</span><span class="top__bar" style="--w:48%"></span></li>
+          <li><span class="top__name">Rye sandwich</span><span class="top__count">18</span><span class="top__bar" style="--w:39%"></span></li>
+        </ul>
+      </section>
+
+      <section class="panel orders" id="orders" aria-labelledby="orders-title">
+        <div class="panel__head">
+          <h2 id="orders-title">Recent orders</h2>
+          <div class="filters" role="group" aria-label="Filter orders by status">
+            <button type="button" class="filters__btn is-on" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filters__btn" data-filter="preparing" aria-pressed="false">Preparing</button>
+            <button type="button" class="filters__btn" data-filter="ready" aria-pressed="false">Ready</button>
+            <button type="button" class="filters__btn" data-filter="paid" aria-pressed="false">Paid</button>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th scope="col">Order</th><th scope="col">Customer</th><th scope="col">Items</th><th scope="col" class="num">Total</th><th scope="col">Status</th></tr>
+            </thead>
+            <tbody id="rows">
+              <tr data-status="paid"><td>#2041</td><td>Elīna K.</td><td>Flat white, cardamom bun</td><td class="num">€7.20</td><td><span class="chip chip--paid">Paid</span></td></tr>
+              <tr data-status="preparing"><td>#2040</td><td>Mārtiņš B.</td><td>Cappuccino × 2</td><td class="num">€7.60</td><td><span class="chip chip--preparing">Preparing</span></td></tr>
+              <tr data-status="ready"><td>#2039</td><td>Ilze R.</td><td>Rye sandwich, filter coffee</td><td class="num">€9.40</td><td><span class="chip chip--ready">Ready</span></td></tr>
+              <tr data-status="paid"><td>#2038</td><td>Jānis O.</td><td>Flat white</td><td class="num">€3.60</td><td><span class="chip chip--paid">Paid</span></td></tr>
+              <tr data-status="ready"><td>#2037</td><td>Anna S.</td><td>Cardamom bun × 3</td><td class="num">€8.70</td><td><span class="chip chip--ready">Ready</span></td></tr>
+              <tr data-status="preparing"><td>#2036</td><td>Roberts L.</td><td>Cappuccino, rye sandwich</td><td class="num">€10.10</td><td><span class="chip chip--preparing">Preparing</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="count" id="count" aria-live="polite">Showing 6 of 6 orders</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

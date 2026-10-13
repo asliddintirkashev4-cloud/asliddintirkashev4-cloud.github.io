@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign-up Form — Asliddin Tirkashev</title>
+  <meta name="description" content="Course project: a sign-up form with HTML validation and clear error messages. Nothing is sent anywhere.">
+  <meta name="theme-color" content="#0b2130">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b2130'/%3E%3Ctext x='32' y='42' font-family='Verdana,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%23f3e6cb'%3EAT%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="shell">
+    <section class="intro">
+      <a class="back" href="../../#projects">Back to profile</a>
+      <p class="kicker">Course project &middot; Forms</p>
+      <h1>Create your account</h1>
+      <p class="lead">A sign-up form for the Web Technologies course. It checks every field in the browser and tells you exactly what to fix. Nothing is sent anywhere.</p>
+
+      <h2 class="rules__title">Password rules</h2>
+      <ul class="rules" id="rules" aria-live="polite">
+        <li data-rule="length"><span class="rules__mark" aria-hidden="true"></span>At least 8 characters</li>
+        <li data-rule="mix"><span class="rules__mark" aria-hidden="true"></span>A letter and a number</li>
+        <li data-rule="match"><span class="rules__mark" aria-hidden="true"></span>Both passwords match</li>
+      </ul>
+    </section>
+
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title" class="panel__title">Sign up</h2>
+
+      <form id="signup" novalidate>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="name-help name-error">
+          <p class="help" id="name-help">As it appears in your student card.</p>
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error">
+          <p class="help" id="email-help">We would use it to send a confirmation link.</p>
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="group">Group</label>
+          <input id="group" name="group" type="text" required maxlength="5" pattern="[0-9]{4}[A-Za-z]" placeholder="4230Z" aria-describedby="group-help group-error">
+          <p class="help" id="group-help">Four digits and one letter, like 4230Z.</p>
+          <p class="error" id="group-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="pw">
+            <input id="password" name="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="password-help password-error">
+            <button class="pw__toggle" type="button" aria-controls="password" aria-pressed="false">Show</button>
+          </div>
+          <p class="help" id="password-help">Use the rules on the left as a guide.</p>
+          <p class="error" id="password-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Repeat password</label>
+          <input id="confirm" name="confirm" type="password" autocomplete="new-password" required aria-describedby="confirm-error">
+          <p class="error" id="confirm-error" role="alert"></p>
+        </div>
+
+        <div class="field field--check">
+          <input id="terms" name="terms" type="checkbox" required aria-describedby="terms-error">
+          <label for="terms">I understand this is a demo and no account is created</label>
+          <p class="error" id="terms-error" role="alert"></p>
+        </div>
+
+        <button class="submit" type="submit">Create account</button>
+      </form>
+
+      <div class="done" id="done" hidden tabindex="-1">
+        <p class="kicker">Form is valid</p>
+        <h2>Welcome, <span id="done-name"></span></h2>
+        <p>All fields passed the checks. In a real project this is where the data would be sent to a server. Here nothing leaves your browser.</p>
+        <dl class="done__list">
+          <div><dt>Email</dt><dd id="done-email"></dd></div>
+          <div><dt>Group</dt><dd id="done-group"></dd></div>
+        </dl>
+        <button class="again" id="again" type="button">Start over</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
