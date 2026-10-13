@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Asliddin Tirkashev — Web Technologies, RNU Riga</title>
   <meta name="description" content="Profile of Asliddin Tirkashev, student of the advanced Web Technologies course at RNU, Riga: course path, certificates and projects.">
-  <meta name="theme-color" content="#06121a">
+  <meta name="theme-color" content="#0b2130">
   <meta property="og:title" content="Asliddin Tirkashev — Web Technologies, RNU Riga">
   <meta property="og:description" content="Student profile: HTML, CSS, Grid, Flexbox, forms. Course path, certificates and projects.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/photo.jpg">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='20' fill='%2306121a'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%2327c4b4' stroke-width='4'/%3E%3Ctext x='32' y='40' font-family='Verdana,sans-serif' font-weight='700' font-size='22' text-anchor='middle' fill='%23ff7f5c'%3EAT%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b2130'/%3E%3Ctext x='32' y='42' font-family='Verdana,sans-serif' font-weight='700' font-size='26' text-anchor='middle' fill='%23f3e6cb'%3EAT%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap">
@@ -18,19 +18,11 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-
-  <!-- atmosphere -->
-  <div class="bg" aria-hidden="true">
-    <i class="blob blob--teal"></i>
-    <i class="blob blob--sky"></i>
-    <i class="blob blob--coral"></i>
-    <i class="grid-lines"></i>
-  </div>
-  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="bg" aria-hidden="true"></div>
 
   <header class="top">
     <div class="wrap top__row">
-      <a class="mark" href="#top" aria-label="Asliddin Tirkashev, home"><span>A</span><span>T</span></a>
+      <a class="brand" href="#top">Asliddin Tirkashev</a>
       <nav class="nav" aria-label="Main">
         <a href="#about" data-nav="about">About</a>
         <a href="#path" data-nav="path">Course path</a>
@@ -46,62 +38,35 @@
     <!-- HERO -->
     <section class="hero wrap" id="top" data-section="top">
       <div class="hero__text">
-        <p class="pill pill--live rise" style="--i:0"><span class="dot" aria-hidden="true"></span>Web Technologies &middot; Group 4230Z</p>
+        <p class="eyebrow rise" style="--i:0">Web Technologies &middot; Group 4230Z</p>
 
         <h1 class="h1" aria-label="Asliddin Tirkashev">
           <span class="line"><span style="--i:1">Asliddin</span></span>
           <span class="line"><span style="--i:2">Tirkashev</span></span>
         </h1>
 
-        <p class="role rise" style="--i:3">
-          I build <span class="typed" id="typed" aria-live="off">web pages</span><span class="caret" aria-hidden="true"></span>
-        </p>
-        <p class="lead rise" style="--i:4">Student at RNU in Riga. This is where my coursework, certificates and projects live.</p>
+        <p class="lead rise" style="--i:3">Student at RNU in Riga. I build web pages by hand with HTML and CSS, and this is where my coursework, certificates and projects live.</p>
 
-        <div class="actions rise" style="--i:5">
-          <a class="btn btn--coral magnet" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">
-            <span>Message on Telegram</span>
-            <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a class="btn btn--glass magnet" href="https://github.com/asliddintirkashev4-cloud" target="_blank" rel="noopener"><span>GitHub</span></a>
+        <div class="actions rise" style="--i:4">
+          <a class="btn btn--solid" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">Message on Telegram</a>
+          <a class="btn btn--line" href="https://github.com/asliddintirkashev4-cloud" target="_blank" rel="noopener">GitHub</a>
         </div>
-
-        <a class="scroll-cue rise" style="--i:6" href="#about" aria-label="Scroll to About">
-          <span class="scroll-cue__mouse" aria-hidden="true"><i></i></span>Scroll
-        </a>
       </div>
 
-      <div class="portrait rise" style="--i:2">
-        <div class="tilt" id="tilt">
-          <div class="ring">
-            <img src="assets/photo.jpg" width="640" height="640" alt="Asliddin Tirkashev standing on a ferry deck in a white linen shirt, with mountains and a lake behind him">
-          </div>
-          <span class="chip chip--a" aria-hidden="true">HTML</span>
-          <span class="chip chip--b" aria-hidden="true">CSS</span>
-          <span class="chip chip--c" aria-hidden="true">Grid</span>
-          <span class="chip chip--d" aria-hidden="true">Flexbox</span>
-          <span class="tag"><span class="dot" aria-hidden="true"></span>Replies on Telegram</span>
-        </div>
+      <figure class="portrait rise" style="--i:2">
+        <img src="assets/photo.jpg" width="640" height="640" alt="Asliddin Tirkashev standing on a ferry deck in a white linen shirt, with mountains and a lake behind him">
+      </figure>
+    </section>
+
+    <!-- TICKER -->
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>HTML</span><i></i><span>CSS</span><i></i><span>SVG</span><i></i><span>Tables</span><i></i><span>Forms</span><i></i><span>Validation</span><i></i><span>Grid</span><i></i><span>Flexbox</span><i></i><span>Custom properties</span><i></i><span>Git</span><i></i><span>GitHub Pages</span><i></i>
+        <span>HTML</span><i></i><span>CSS</span><i></i><span>SVG</span><i></i><span>Tables</span><i></i><span>Forms</span><i></i><span>Validation</span><i></i><span>Grid</span><i></i><span>Flexbox</span><i></i><span>Custom properties</span><i></i><span>Git</span><i></i><span>GitHub Pages</span><i></i>
       </div>
     </section>
 
-    <!-- MARQUEE -->
-    <section class="marquee" aria-hidden="true">
-      <div class="marquee__row">
-        <div class="marquee__track">
-          <span>HTML</span><i></i><span>CSS</span><i></i><span>SVG</span><i></i><span>Tables</span><i></i><span>Forms</span><i></i><span>Validation</span><i></i><span>Grid</span><i></i><span>Flexbox</span><i></i><span>Custom properties</span><i></i><span>Git</span><i></i><span>GitHub Pages</span><i></i>
-          <span>HTML</span><i></i><span>CSS</span><i></i><span>SVG</span><i></i><span>Tables</span><i></i><span>Forms</span><i></i><span>Validation</span><i></i><span>Grid</span><i></i><span>Flexbox</span><i></i><span>Custom properties</span><i></i><span>Git</span><i></i><span>GitHub Pages</span><i></i>
-        </div>
-      </div>
-      <div class="marquee__row marquee__row--outline">
-        <div class="marquee__track marquee__track--rev">
-          <span>Selectors</span><i></i><span>Positioning</span><i></i><span>Units</span><i></i><span>Functions</span><i></i><span>Browser compatibility</span><i></i><span>Layout</span><i></i>
-          <span>Selectors</span><i></i><span>Positioning</span><i></i><span>Units</span><i></i><span>Functions</span><i></i><span>Browser compatibility</span><i></i><span>Layout</span><i></i>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT (bento) -->
+    <!-- ABOUT -->
     <section class="sec wrap" id="about" data-section="about">
       <header class="sec__head reveal">
         <p class="kicker">01 &middot; About</p>
@@ -109,13 +74,13 @@
       </header>
 
       <div class="bento">
-        <article class="card spot reveal bento__text" style="--d:0">
+        <article class="card reveal bento__text">
           <p>I study at RNU in Riga, group 4230Z. This term I am in the advanced Web Technologies course. It continues the first Web Technologies subject and ends with a course project.</p>
           <p>I write HTML for structure and CSS for layout. The course goes through SVG, tables, forms with validation, and CSS Grid used together with Flexbox.</p>
           <p>Outside of code I am learning how AI works. I finished IBM's AI Fundamentals course and keep the badge in the Certificates section.</p>
         </article>
 
-        <article class="card spot reveal bento__facts" style="--d:1">
+        <article class="card reveal bento__facts" style="--d:1">
           <h3 class="card__title">Quick facts</h3>
           <dl class="facts">
             <div><dt>Studying</dt><dd>Web Technologies, advanced</dd></div>
@@ -126,21 +91,20 @@
           </dl>
         </article>
 
-        <article class="card spot reveal bento__now" style="--d:2">
-          <p class="kicker kicker--coral">Right now</p>
+        <article class="card reveal bento__now" style="--d:2">
+          <p class="kicker">Right now</p>
           <p class="big">Advanced Web Technologies, with a course project at the end.</p>
-          <div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
         </article>
 
-        <a class="card spot reveal bento__tg" style="--d:3" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">
+        <a class="card card--link reveal bento__tg" style="--d:3" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">
           <p class="kicker">Telegram</p>
           <p class="big big--handle">@Asliddin_Tirkashev</p>
-          <svg class="arrow" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="more">Open the chat</span>
         </a>
       </div>
     </section>
 
-    <!-- COURSE PATH (timeline) -->
+    <!-- COURSE PATH -->
     <section class="sec wrap" id="path" data-section="path">
       <header class="sec__head reveal">
         <p class="kicker">02 &middot; Course path</p>
@@ -150,18 +114,18 @@
       <ol class="path" id="path-list">
         <li class="path__fill" aria-hidden="true"></li>
 
-        <li class="stop reveal" style="--d:0">
+        <li class="stop reveal">
           <span class="stop__node" aria-hidden="true"></span>
-          <div class="card spot">
+          <div class="card">
             <p class="kicker">Module 1</p>
             <h3>Intermediate HTML Concepts</h3>
             <ul class="tags"><li>Introduction</li><li>SVG</li><li>Tables</li></ul>
           </div>
         </li>
 
-        <li class="stop reveal" style="--d:0">
+        <li class="stop reveal">
           <span class="stop__node" aria-hidden="true"></span>
-          <div class="card spot">
+          <div class="card">
             <p class="kicker">Module 2</p>
             <h3>Intermediate CSS Concepts</h3>
             <ul class="tags">
@@ -170,18 +134,18 @@
           </div>
         </li>
 
-        <li class="stop reveal" style="--d:0">
+        <li class="stop reveal">
           <span class="stop__node" aria-hidden="true"></span>
-          <div class="card spot">
+          <div class="card">
             <p class="kicker">Module 3</p>
             <h3>Forms</h3>
             <ul class="tags"><li>Form basics</li><li>Form validation</li><li class="tags__project">Project: Sign-up Form</li></ul>
           </div>
         </li>
 
-        <li class="stop reveal" style="--d:0">
+        <li class="stop reveal">
           <span class="stop__node" aria-hidden="true"></span>
-          <div class="card spot">
+          <div class="card">
             <p class="kicker">Module 4</p>
             <h3>Grid</h3>
             <ul class="tags"><li>Introduction to Grid</li><li>Creating a grid</li><li>Positioning grid elements</li><li>Advanced grid properties</li><li>Using Flexbox and Grid</li><li class="tags__project">Project: Admin Dashboard</li></ul>
@@ -198,22 +162,16 @@
       </header>
 
       <div class="certs">
-        <article class="cert reveal" style="--d:0">
-          <div class="holo tilt-card" id="holo">
-            <img src="assets/ibm-ai-fundamentals.png" width="600" height="600" loading="lazy" alt="IBM SkillsBuild badge: AI Fundamentals, Foundations for Understanding AI">
-            <span class="holo__shine" aria-hidden="true"></span>
-          </div>
+        <article class="cert reveal">
+          <img class="cert__badge" src="assets/ibm-ai-fundamentals.png" width="600" height="600" loading="lazy" alt="IBM SkillsBuild badge: AI Fundamentals, Foundations for Understanding AI">
           <div class="cert__text">
-            <p class="kicker kicker--coral">IBM SkillsBuild &middot; digital badge</p>
+            <p class="kicker">IBM SkillsBuild &middot; digital badge</p>
             <h3>AI Fundamentals: Foundations for Understanding AI</h3>
-            <a class="link" href="https://ibm.biz/BdbBS4" target="_blank" rel="noopener">View the course
-              <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a class="link" href="https://ibm.biz/BdbBS4" target="_blank" rel="noopener">View the course</a>
           </div>
         </article>
 
         <div class="slot reveal" style="--d:1">
-          <svg viewBox="0 0 48 48" width="34" height="34" aria-hidden="true"><path d="M24 12v24M12 24h24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
           <p>More certificates will be added here as I finish them.</p>
         </div>
       </div>
@@ -227,41 +185,18 @@
       </header>
 
       <div class="projects">
-        <article class="project card spot reveal" style="--d:0">
-          <div class="project__art" aria-hidden="true">
-            <div class="mock mock--form">
-              <span class="mock__label">Email</span>
-              <span class="mock__input mock__input--err"><i></i></span>
-              <span class="mock__error">Enter a valid email</span>
-              <span class="mock__label">Password</span>
-              <span class="mock__input"></span>
-              <span class="mock__btn"></span>
-            </div>
-          </div>
-          <div class="project__body">
-            <div class="project__top"><p class="kicker">Project 01</p><span class="status">Planned</span></div>
-            <h3>Sign-up Form</h3>
-            <p>Form basics and validation in plain HTML and CSS, with labels above the fields and errors under them.</p>
-            <p class="note">Sketch of the idea, not a screenshot.</p>
-          </div>
+        <article class="project card reveal">
+          <span class="project__n" aria-hidden="true">01</span>
+          <div class="project__top"><p class="kicker">Project</p><span class="status">Planned</span></div>
+          <h3>Sign-up Form</h3>
+          <p>Form basics and validation in plain HTML and CSS, with labels above the fields and errors under them.</p>
         </article>
 
-        <article class="project card spot reveal" style="--d:1">
-          <div class="project__art" aria-hidden="true">
-            <div class="mock mock--dash">
-              <span class="mock__side"></span>
-              <span class="mock__tile mock__tile--wide"></span>
-              <span class="mock__tile"></span>
-              <span class="mock__tile"></span>
-              <span class="mock__chart"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-            </div>
-          </div>
-          <div class="project__body">
-            <div class="project__top"><p class="kicker">Project 02</p><span class="status">Planned</span></div>
-            <h3>Admin Dashboard</h3>
-            <p>A dashboard layout built with CSS Grid for the frame and Flexbox for the details inside each block.</p>
-            <p class="note">Sketch of the idea, not a screenshot.</p>
-          </div>
+        <article class="project card reveal" style="--d:1">
+          <span class="project__n" aria-hidden="true">02</span>
+          <div class="project__top"><p class="kicker">Project</p><span class="status">Planned</span></div>
+          <h3>Admin Dashboard</h3>
+          <p>A dashboard layout built with CSS Grid for the frame and Flexbox for the details inside each block.</p>
         </article>
       </div>
     </section>
@@ -272,10 +207,7 @@
         <p class="kicker">05 &middot; Contact</p>
         <h2>Write to me</h2>
       </header>
-      <a class="contact__big magnet reveal" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">
-        <span>@Asliddin_Tirkashev</span>
-        <svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
+      <a class="contact__big reveal" href="https://t.me/Asliddin_Tirkashev" target="_blank" rel="noopener">@Asliddin_Tirkashev</a>
       <p class="contact__meta reveal">Telegram is the fastest way to reach me.</p>
     </section>
   </main>
